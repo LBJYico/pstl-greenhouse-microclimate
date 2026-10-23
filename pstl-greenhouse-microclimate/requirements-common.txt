@@ -1,0 +1,10 @@
+numpy>=1.24,<2
+pandas>=2.0,<3
+scikit-learn>=1.3
+PyYAML>=6.0
+matplotlib>=3.7
+seaborn>=0.13
+scipy>=1.10
+tqdm>=4.66
+# Install torch separately for the current host/runtime. Optional only for CEEMDAN runs:
+# EMD-signal>=1.6

@@ -1,0 +1,32 @@
+name: selective_event_memory
+base_experiment: main_forecasting
+feature_mode: main_solar
+history: 12
+horizon: 6
+event_classes: [background, sunrise, noon, cloudy_transition]
+event_labeling:
+  causal: true
+  active_steps_after_event: 3
+  sunrise: solar-altitude crossing from <= 0 to > 0 degrees
+  noon: daily maximum solar altitude from deterministic solar geometry
+  cloudy_transition: outdoor light <= 50% of the trailing six-sample median while solar altitude > 5 degrees; candidates separated by at least six samples
+model:
+  d_model: 32
+  d_state: 8
+  n_heads: 4
+  dropout: 0.1
+  memories: 4
+training:
+  batch_size: 64
+  learning_rate: 0.0003
+  weight_decay: 0.001
+  event_loss_weight: 0.1
+  full_epochs: 25
+  full_patience: 6
+  seeds: [42, 11, 22, 33, 44]
+quick_validation:
+  seed: 42
+  epochs: 4
+  max_train_windows: 2000
+output_root: ../../runs/selective_event_memory
+results_root: ../../results/selective_event_memory

@@ -1,0 +1,9 @@
+name: mamba_state_response
+data: ../data/winter_solar.yaml
+protocol: ../protocol/default.yaml
+spatial: ../spatial/sensor_mapping.yaml
+model_config: ../models/pstl.yaml
+events: [sunrise, noon, cloudy_transition]
+response_metric: normalized_state_update_l2
+output_root: ../../runs
+event_definition_file: event_definitions.yaml

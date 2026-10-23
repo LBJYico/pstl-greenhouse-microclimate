@@ -1,0 +1,12 @@
+name: main_forecasting
+data: ../data/winter_solar.yaml
+protocol: ../protocol/default.yaml
+spatial: ../spatial/sensor_mapping.yaml
+model_config: ../models/pstl.yaml
+feature_mode: main_solar
+include_outdoor_solar_history: true
+include_ceemdan: false
+output_root: ../../runs
+history_lengths: [6, 12, 24]
+horizons: [6, 12, 24]
+split: {train: 0.70, validation: 0.10, test: 0.20}

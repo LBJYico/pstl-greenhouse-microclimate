@@ -1,0 +1,17 @@
+seed: 42
+seeds: [42, 11, 22, 33, 44]
+train_ratio: 0.70
+validation_ratio: 0.10
+test_ratio: 0.20
+history_lengths: [6, 12, 24]
+horizons: [6, 12, 24]
+batch_size: 32
+epochs: 100
+patience: 15
+learning_rate: 0.0001
+scheduler: cosine_annealing
+weight_decay: 0.01
+grad_clip_norm: 1.0
+loss: weighted_mse
+target_weights: {temperature: 1.0, humidity: 1.0, light: 1.0}
+num_workers: 0

@@ -1,0 +1,15 @@
+name: solar_geometry_vs_calendar
+data: ../data/winter_solar.yaml
+protocol: ../protocol/default.yaml
+spatial: ../spatial/sensor_mapping.yaml
+model_config: ../models/pstl.yaml
+feature_modes: [no_temporal, calendar, solar_geometry, calendar_plus_solar]
+include_outdoor_solar_history: false
+include_ceemdan: false
+output_root: ../../runs
+note: >-
+  Same indoor history and non-solar outdoor meteorology in all arms. Exclude outdoor
+  measured light, net radiation, and theoretical radiation in all arms. Calendar and
+  solar features are generated for historical and forecast timestamps because they
+  are known at forecast time. Interpretation is representation utility, not proof
+  of information independent of timestamp.

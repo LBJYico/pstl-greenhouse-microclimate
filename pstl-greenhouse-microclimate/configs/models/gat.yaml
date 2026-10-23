@@ -1,0 +1,4 @@
+d_model: 96
+n_heads: 4
+dropout: 0.1
+graph_rule: multihead_node_attention

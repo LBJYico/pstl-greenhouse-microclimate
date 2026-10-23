@@ -1,0 +1,20 @@
+{
+  "dataset": "greenhouse winter microclimate model inputs",
+  "files": [
+    {
+      "file": "smoothed_winter_indoor_environment.csv",
+      "bytes": 3492752,
+      "sha256": "15751f374893637fa3742eed6c7fd8da06ce3c831bb77ac95227368a226d7f90"
+    },
+    {
+      "file": "winter_outdoorenv_solardata.csv",
+      "bytes": 1192542,
+      "sha256": "48ef9cb3f687a0d6b7d2bbd9e8a657e72175a9b932f1aa1c1f53281209316444"
+    },
+    {
+      "file": "winter_outdoor_data.csv",
+      "bytes": 825880,
+      "sha256": "4fceee7a189bb71f2289a02d49a03e192efac7ba716df7e9af5c21964aa8b2d3"
+    }
+  ]
+}

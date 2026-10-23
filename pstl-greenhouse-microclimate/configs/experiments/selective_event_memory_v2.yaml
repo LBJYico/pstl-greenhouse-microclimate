@@ -1,0 +1,23 @@
+name: selective_event_memory_v2
+base_dataset: main_forecasting/main_solar_h12_p6
+memory_modes: [gated, ungated, no_recurrence]
+event_classes: [sunrise, noon, cloudy_transition]
+event_position: [1, 7]
+minimum_delay_steps: 4
+training:
+  d_model: 32
+  d_state: 8
+  dropout: 0.1
+  batch_size: 64
+  learning_rate: 0.0003
+  recall_loss_weight: 0.5
+  quick_epochs: 6
+  full_epochs: 25
+  patience: 6
+  quick_max_train_windows: 2000
+  seeds: [42, 11, 22, 33, 44]
+labels:
+  sunrise: solar altitude crossing <= 0 to > 0 degrees
+  noon: daily maximum solar altitude
+  cloudy_transition: outdoor light <= 50% of trailing six-sample median while solar altitude > 5 degrees; candidate spacing >= six samples
+outputs: runs/selective_event_memory_v2 and results/selective_event_memory_v2

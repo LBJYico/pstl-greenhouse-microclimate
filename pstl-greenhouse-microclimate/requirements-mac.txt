@@ -1,0 +1,2 @@
+-r requirements-common.txt
+# Install a current macOS PyTorch build separately to enable Apple MPS when available.

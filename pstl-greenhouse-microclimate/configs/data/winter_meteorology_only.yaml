@@ -1,0 +1,13 @@
+project_root: ../..
+indoor_csv: ../../data/raw/smoothed_winter_indoor_environment.csv
+outdoor_csv: ../../data/raw/winter_outdoor_data.csv
+sensor_mapping: ../spatial/sensor_mapping.yaml
+timestamp_column: timestamp
+timezone: Asia/Shanghai
+expected_cadence_minutes: 10
+max_interpolation_gap_steps: 2
+solar_source: computed_from_timestamp_and_site
+latitude_deg: 39.91
+longitude_deg: 116.66
+timezone_offset_hours: 8
+include_measured_solar_for_main: false

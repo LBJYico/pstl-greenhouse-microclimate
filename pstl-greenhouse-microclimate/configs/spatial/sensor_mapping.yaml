@@ -1,0 +1,26 @@
+verified: true
+metric_coordinates_verified: false
+coordinate_units: figure_relative
+coordinate_note: >-
+  A1-A9 membership and sensor IDs transcribed from the supplied layout figure.
+  Relative plan-view coordinates are approximate drawing coordinates, not surveyed
+  metric coordinates. Relative topology is transcribed from the user-provided figure;
+  metric coordinates remain unverified and must not be reported in metres. Heights
+  follow the figure's (a,b,c) = (1m,2m,4m) legend.
+height_m: [1.0, 2.0, 4.0]
+sites:
+  A1: {sensor_ids: ["01", "02", "03"], xy: [0.25, 0.18]}
+  A2: {sensor_ids: ["04", "05", "06"], xy: [0.75, 0.18]}
+  A3: {sensor_ids: ["19", "20", "21"], xy: [0.25, 0.38]}
+  A4: {sensor_ids: ["22", "23", "24"], xy: [0.75, 0.38]}
+  A5: {sensor_ids: ["25", "26", "27"], xy: [0.50, 0.58]}
+  A6: {sensor_ids: ["33", "34", "35"], xy: [0.25, 0.70]}
+  A7: {sensor_ids: ["29", "30", "31"], xy: [0.75, 0.70]}
+  A8: {sensor_ids: ["13", "14", "15"], xy: [0.25, 0.90]}
+  A9: {sensor_ids: ["10", "11", "12"], xy: [0.75, 0.90]}
+variables:
+  temperature: "空气温度{sensor_id}"
+  humidity: "空气湿度{sensor_id}"
+  light: "光照{sensor_id}"
+  order_within_site: [1m, 2m, 4m]
+excluded_from_indoor_nodes: ["16"]

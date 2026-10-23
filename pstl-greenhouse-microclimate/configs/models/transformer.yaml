@@ -1,0 +1,4 @@
+d_model: 96
+n_heads: 4
+n_layers: 3
+dropout: 0.1

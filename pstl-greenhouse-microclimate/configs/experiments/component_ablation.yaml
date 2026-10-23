@@ -1,0 +1,9 @@
+name: component_ablation
+data: ../data/winter_solar.yaml
+protocol: ../protocol/default.yaml
+spatial: ../spatial/sensor_mapping.yaml
+model_config: ../models/pstl.yaml
+feature_modes: [raw_no_geometry, geometry_plus_raw, ceemdan_causal, full_ceemdan_geometry]
+include_outdoor_solar_history: true
+include_ceemdan: false
+output_root: ../../runs
